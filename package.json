@@ -1,0 +1,45 @@
+{
+  "name": "porkbun-js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-gio/porkbun-js.git"
+  },
+  "version": "0.0.1",
+  "description": "Porkbun API wrapper for Node.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "release": "npm run build && changeset publish",
+    "lint": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "porkbun",
+    "api",
+    "wrapper",
+    "node",
+    "nodejs",
+    "typescript",
+    "dns",
+    "domain",
+    "ssl"
+  ],
+  "author": "Giovani Rodriguez",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}
